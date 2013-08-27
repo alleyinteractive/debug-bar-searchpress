@@ -3,7 +3,7 @@
 class Debug_Bar_SearchPress_Panel extends Debug_Bar_Panel {
 
 	public function init() {
-		$this->title( __( 'Elasticsearch', 'debug-bar-searchpress' ) );
+		$this->title( __( 'SearchPress', 'debug-bar-searchpress' ) );
 	}
 
 	public function prerender() {
@@ -19,8 +19,8 @@ class Debug_Bar_SearchPress_Panel extends Debug_Bar_Panel {
 			<h3>es_query_args</h3>
 			<?php echo Debug_Bar_SearchPress()->listify( Debug_Bar_SearchPress()->content['es_query_args'] ) ?>
 
-			<h3>wrp_args</h3>
-			<?php echo Debug_Bar_SearchPress()->listify( Debug_Bar_SearchPress()->content['wrp_args'] ) ?>
+			<h3>sp_rp_args</h3>
+			<?php echo Debug_Bar_SearchPress()->listify( Debug_Bar_SearchPress()->content['sp_rp_args'] ) ?>
 
 			<h3><?php _e( 'HTTP Endpoint Requests', 'debug-bar-searchpress' ); ?></h3>
 			<?php echo Debug_Bar_SearchPress()->listify( Debug_Bar_SearchPress()->content['response'] ) ?>

@@ -51,13 +51,13 @@ class Debug_Bar_SearchPress {
 		$this->content = array(
 			'es_wp_query_args'   => array(),
 			'es_query_args'      => array(),
-			'wrp_args'           => array(),
+			'sp_rp_args'           => array(),
 			'response'           => array()
 		);
 		add_filter( 'debug_bar_panels',          array( $this, 'add_panels' )                );
 		add_filter( 'sp_search_wp_query_args',   array( $this, 'es_wp_query_args' ),  99     );
 		add_filter( 'sp_search_query_args',      array( $this, 'es_query_args' ),     99     );
-		add_filter( 'sp_related_posts_args',     array( $this, 'wrp_args' ),          99     );
+		add_filter( 'sp_related_posts_args',     array( $this, 'sp_rp_args' ),          99     );
 		add_filter( 'http_api_debug',            array( $this, 'post_request' ),      10, 5  );
 		add_action( 'debug_bar_enqueue_scripts', array( $this, 'static_files' )              );
 	}
@@ -95,10 +95,10 @@ class Debug_Bar_SearchPress {
 		return $args;
 	}
 
-	public function wrp_args( $args ) {
-		$count = count( $this->content['wrp_args'] ) + 1;
-		$this->content['wrp_args'][] = "
-		<h4>WRP Args #{$count}</h4>
+	public function sp_rp_args( $args ) {
+		$count = count( $this->content['sp_rp_args'] ) + 1;
+		$this->content['sp_rp_args'][] = "
+		<h4>Related Posts Args #{$count}</h4>
 		<dl>
 			<dt>PHP</dt>
 				<dd><pre>" . print_r( $args, 1 ) . "</pre></dd>
