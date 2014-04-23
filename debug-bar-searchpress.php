@@ -110,7 +110,7 @@ class Debug_Bar_SearchPress {
 	}
 
 	public function post_request( $response, $type, $class, $args, $url ) {
-		if ( preg_match( "#http://public-api\.wordpress\.com/rest/v1/sites/\d+/search#i", $url ) ) {
+		if ( preg_match( "#/post/_search#i", $url ) ) {
 			$body = wp_remote_retrieve_body( $response );
 			$count = count( $this->content['response'] ) + 1;
 			$this->content['response'][] = "
