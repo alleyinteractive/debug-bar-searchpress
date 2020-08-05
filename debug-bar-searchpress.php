@@ -111,7 +111,7 @@ class Debug_Bar_SearchPress {
 
 	public function post_request( $response, $type, $class, $args, $url ) {
 		// Account for ES 6.0 and 7.0 doc types.
-		if ( preg_match( "#/post/_search#i", $url ) || preg_match( "#/_doc/_search#i", $url ) ) {
+		if ( preg_match( "#/(post|_doc)/_search#i", $url ) ) {
 			$body = wp_remote_retrieve_body( $response );
 			$count = count( $this->content['response'] ) + 1;
 			$this->content['response'][] = "
