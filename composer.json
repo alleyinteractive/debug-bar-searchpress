@@ -1,0 +1,17 @@
+{
+	"name": "alleyinteractive/debug-bar-searchpress",
+	"type": "wordpress-plugin",
+	"description": "Debug Bar SearchPress Add-on",
+	"homepage": "https://github.com/alleyinteractive/debug-bar-searchpress",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Alley",
+			"homepage": "https://alley.co/"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/alleyinteractive/debug-bar-searchpress/issues",
+		"source": "https://github.com/alleyinteractive/debug-bar-searchpress"
+	}
+}
